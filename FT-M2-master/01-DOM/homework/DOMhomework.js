@@ -71,7 +71,7 @@ function buildToDo(todo, index) {
 
 function buildToDos(toDos) {
   // Tu código acá: 
-  let arr = toDos.map((todo, index) => buildToDo(todo, index));
+  let arr = toDos.map((todo, index) => buildToDo(todo, index)); // Recorre todo el array, hacemos un cb, llama a buildToDo.
   return arr;
 }
 
@@ -104,11 +104,11 @@ function displayToDos() {
 
 function addToDo() {
   // Tu código acá:
-  let descripcion = document.getElementById("toDoContainer").value; 
-  let tarea = new ToDo(descripcion);
-  toDoItems.push(tarea);
+  let descripcion = document.getElementById("toDoContainer").value;  // Le asignamos una variable que busca por id y buscamos su valor.
+  let tarea = new ToDo(descripcion); // Declaramos otra variable que cree una nueva clase.
+  toDoItems.push(tarea); // Pusheamos todo los items en el nuevo array
 
-  let inp = document.getElementById("toDoInput");
+  let inp = document.getElementById("toDoInput"); 
   inp.value = "";
 
   displayToDos();

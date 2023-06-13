@@ -1,5 +1,8 @@
-(function () {
-  window.whiteboard = new window.EventEmitter();
+  //var EvenEmitter = require("./event-emitter"); // Common JS
+  import EvenEmitter from "./event-emitter";
+
+  // window.whiteboard = new window.EventEmitter();
+  export let whiteboard = new EvenEmitter();
 
   // Ultimately, the color of our stroke;
   var color;
@@ -105,5 +108,4 @@
     if (shouldBroadcast) {
       whiteboard.emit("draw", start, end, strokeColor);
     }
-  };
-})();
+};
